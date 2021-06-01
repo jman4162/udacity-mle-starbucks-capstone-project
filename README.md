@@ -40,6 +40,39 @@ The key files for this project are:
 
 The [datasets](https://drive.google.com/drive/folders/12Sq7xssp154Dl5Dqhmc_ZYgkGzDylhbj?usp=sharing) for this project are available here. Processed datasets used in this project are available in this [folder](https://github.com/jman4162/udacity-mle-starbucks-capstone-project/tree/main/trainingData).
 
+The structure of the dataset provided Starbucks Capstone project notebook is structured as follows. Three files contain the data:
+* `portfolio.json` - containing offer ids and metadata about each offer (duration, type, etc.)
+* `profile.json` - demographic data for each customer
+* `transcript.json` - records for transactions, offers received, offers viewed, and offers completed
+
+The three types of offers presented in the `_type` column of `portfolio.json` are:
+* Buy-one-get-one (BOGO): a user needs to spend a certain amount to get a reward equal to that threshold amount.
+* Discount: a user gains a reward equal to a fraction of the amount spent. 
+* Informational offer: there is no reward, but neither is there a required amount that the user is expected to spend.
+
+Here is the schema and explanation of each variable in the files:
+
+`portfolio.json` - Size: 10 offers by six fields
+* *id* (string) - offer id
+* *offer_type* (string) - type of offer, i.e., BOGO, discount, informational
+* *difficulty* (int) - minimum required spend to complete an offer
+* *reward* (int) - reward given for completing an offer
+* *duration* (int) - time for offer to be open, in days
+* *channels* (list of strings)
+
+`profile.json` - Size: 17,000 users by five fields
+* *age* (int) - age of the customer
+* *became_member_on* (int) - date when customer created an app account
+* *gender* (str) - gender of the customer (note some entries contain 'O' for other rather than M or F)
+* *id* (str) - customer-id
+* *income* (float) - customer's income
+
+`transcript.json` - Size: 306,534 offers by four fields
+* *event* (str) - record description (i.e., transaction, offer received, offer viewed, etc.)
+* *person* (str) - customer-id
+* *time* (int) - time in hours since the start of the test. The data begins at time t=0
+* *value* (dict of strings) - either an offer id or transaction amount depending on the record
+
 ## Project Proposal
 
 The accepted [project proposal](https://github.com/jman4162/udacity-mle-starbucks-capstone-project/blob/main/HodgeJohn_Udacity_MLE_Capstone_Proposal_v2.pdf) document is available here.
