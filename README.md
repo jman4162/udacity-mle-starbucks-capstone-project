@@ -24,11 +24,33 @@ This project is written in Python 3 using Jupyter notebooks. The relevant Python
 
 ## File Descriptions
 
+The key files for this project are:
+* `01_Starbucks_Capstone_notebook_dataExploration_and_Cleaning.ipynb` : Code notebook used for data exploration, cleaning, and customer segmentation.
+* `02_convertTranscriptData.ipynb` : Code notebook used for the preprocessing of the transcript dataset.
+* `03_scikit-learn_trainModel_OfferCompleted.ipynb` : Code notebook used for data preproccessing and training machine learning (ML) models using scikit-learn to predict completed offers.
+* `04_starbucksUdacity_trainDNN_classifier_offerCompleted.ipynb` : Code notebook used for data preproccessing and training deep learning model using PyTorch to predict completed offers.
+* `05_scikit-learn_trainModel_OfferViewed.ipynb` : Code notebook used for data preproccessing and to train ML models using scikit-learn to predict viewed offers.
+* `06_starbucksUdacity_trainDNN_classifier_offerViewed.ipynb` : Code notebook used for data preproccessing and training deep learning model using PyTorch to predict viewed offers.
+* `07_trainRegression_OfferCompleted.ipynb` : Code notebook used for data preproccessing and training ML models using scikit-learn to predict customer revenue.
+* `08_starbucksUdacity_trainDNN_regression_regAdjRev_v2.ipynb` : Code notebook used for training the DNN regression model using PyTorch to predict customer revenue.
+* `HodgeJohn_Udacity_MLE_Capstone_Report_v1.pdf` : Final project report.
+
 
 ## Data
 
-The [datasets](https://drive.google.com/drive/folders/1UGYtDqlLXTMqyXWA6fqCUTaek2kJB4CG?usp=sharing ) for this project are available here. Processed datasets used in this project are available in this [folder](https://github.com/jman4162/udacity-mle-starbucks-capstone-project/tree/main/trainingData).
+The [datasets](https://drive.google.com/drive/folders/12Sq7xssp154Dl5Dqhmc_ZYgkGzDylhbj?usp=sharing) for this project are available here. Processed datasets used in this project are available in this [folder](https://github.com/jman4162/udacity-mle-starbucks-capstone-project/tree/main/trainingData).
 
 ## Project Proposal
 
 The accepted [project proposal](https://github.com/jman4162/udacity-mle-starbucks-capstone-project/blob/main/HodgeJohn_Udacity_MLE_Capstone_Proposal_v2.pdf) document is available here.
+
+## Conclusions
+
+Overall, this project was surprisingly challenging due to the structure of the `transcript.json` dataset and the preprocessing required to generate useful ML model predictions. However, I learned a lot in this project and developed solutions to the challenges discussed in the project proposal:
+* Developed predictive ML models to classify whether views and completes a promotional offer based on personalized customer and offer characteristics
+* Developed predictive ML models to determine how much a customer spends by completing an offer after subtracting out the reward cost. The ML predictive model outperforms the benchmark model in each of our three studies, and the benchmark models also perform pretty well.
+* Determined the features that are most significant to whether or not a customer views and completes a promotional offer
+* Defined key customer segment groups based on customer demographics
+
+The models and insights developed in this project allow the company to understand the primary drivers of an effective and profitable promotional offer. The predictive models will enable the company to personalize the characteristics of each promotion to maximize its odds of success for each customer. This project is an excellent example of how machine learning models benefit marketing campaigns and create business value. Lastly, this project shows why a more efficient and straightforward machine learning model is often preferable to a larger and more complex deep learning model.
+
